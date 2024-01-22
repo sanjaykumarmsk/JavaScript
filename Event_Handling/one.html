@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html event</title>
+    <style>
+      /* img {
+            width: 100%;
+        } */
+      body {
+        background-image: url("img_girl.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            src="https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="duck"
+            id="duck"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/394621/pexels-photo-394621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="cat"
+            id="cat"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/569344/pexels-photo-569344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="house"
+            id="house"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/569844/pexels-photo-569844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="boy"
+            id="boy"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/798053/pexels-photo-798053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="library"
+            id="library"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/873382/pexels-photo-873382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="bike"
+            id="bike"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/873381/pexels-photo-873381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="car"
+            id="car"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/998715/pexels-photo-998715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="tea"
+            id="tea"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/1114607/pexels-photo-1114607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="train"
+            id="train"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/1114612/pexels-photo-1114612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="watch"
+            id="watch"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/1114617/pexels-photo-1114617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="polis"
+            id="polis"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/1115809/pexels-photo-1115809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="camel"
+            id="camel"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/1114643/pexels-photo-1114643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="sea"
+            id="sea"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/1115826/pexels-photo-1115826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="horse"
+            id="horse"
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // document.getElementById('duck').onclick = function(){
+    //     alert("duck clicked")
+    // }
+
+    // attachEvent()
+    //jQuery - on
+
+    //type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, creenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    //   document.getElementById('duck').addEventListener('click', function(e) {
+    //     console.log("clicked inside the ul");
+    //   }, false)
+
+    //   document.getElementById('duck').addEventListener('click', function(e){
+    //     console.log("duck clicked");
+    //     e.stopPropagation();
+    //   }, false)
+
+    //   document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     console.log("google clicked");
+    //   }, false)
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+    });
+  </script>
+</html>
