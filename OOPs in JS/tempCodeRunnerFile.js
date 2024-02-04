@@ -1,1 +1,3 @@
-heroPower.heySanjay();
+set password(value) {
+    //      this.password = value;
+    // }
